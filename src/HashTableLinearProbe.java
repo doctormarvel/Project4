@@ -131,6 +131,7 @@ public class HashTableLinearProbe <K, V>{
 				for (int j = hashValue; j < tableSize; j++) {
 					if (newTable[j]== null) {
 						newTable[j] = new HashEntry(hashtable[i].inputkey, hashtable[i].inputvalue);
+						break;
 					}
 					else if(j == tableSize-1) {
 						j = 0;
